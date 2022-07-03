@@ -22,7 +22,15 @@ class MainActivity : AppCompatActivity() {
             startActivity(myIntent)
         }
 
-        loginBtn.setOnClickListener {  }
+        loginBtn.setOnClickListener {
+            val inputEmail = idEdt.text.toString()
+
+            val myIntent2 = Intent(this, MainActivity2::class.java)
+            myIntent2.putExtra("email", inputEmail)
+            startActivity(myIntent2)
+        }
+
+
 
 
 
