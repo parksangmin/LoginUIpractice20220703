@@ -25,15 +25,20 @@ class MainActivity : AppCompatActivity() {
 //            아이디 값과 비밀번호 값을 변수함
             val id = idEdt.text.toString() // 아이디값 변수함
             val password = passwordEdt.text.toString() // 비밀번호 변수화
-            // 아이디값이 "admin", 패스워드"asdf"
-            if (id != "admin") {
-                Toast.makeText(this, "아이디가 잘못되었습니다", Toast.LENGTH_SHORT).show()
-            // 비밀번호 값 판별
-            }else if(password != "asdf" ){
-                Toast.makeText(this, "비밀번호가 잘못되었습니다", Toast.LENGTH_SHORT).show()
-            //두가지 판별하는 것
-            } else{
+//            // 아이디값이 "admin", 패스워드"asdf"
+//            if (id != "admin") {
+//                Toast.makeText(this, "아이디가 잘못되었습니다", Toast.LENGTH_SHORT).show()
+//            // 비밀번호 값 판별
+//            }else if(password != "asdf" ){
+//                Toast.makeText(this, "비밀번호가 잘못되었습니다", Toast.LENGTH_SHORT).show()
+//            //두가지 판별하는 것
+//            } else{
+//                Toast.makeText(this, "관리자님 환영합니다", Toast.LENGTH_SHORT).show()
+//            }
+            if (id == "admin" && password =="asdf"){
                 Toast.makeText(this, "관리자님 환영합니다", Toast.LENGTH_SHORT).show()
+            } else if(id != "admin" && password != "asdf"){
+                Toast.makeText(this, "로그인에 실패하였습니다", Toast.LENGTH_SHORT).show()
             }
         }
     }
